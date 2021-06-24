@@ -19,8 +19,8 @@
                     <img src="img/logo.png" alt="logo boolean">
                 </div>
                 <div class="head-basso">
-                    <input type="text" placeholder="scrivi le cose da fare">
-                    <button>aggiungi</button>
+                    <input type="text" placeholder="scrivi le cose da fare" v-model="newli">
+                    <button @click='addElemento'>aggiungi</button>
                 </div>
             </div>
         </header>
