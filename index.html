@@ -7,44 +7,38 @@
     <title>vue to do list</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 </head>
 <body>
 
-    <header>
-        <div class="cont-head">
-            <div class="logo">
-                <img src="img/logo.png" alt="logo boolean">
-            </div>
-            <div class="head-basso">
-                <input type="text">
-                <button>aggiungi</button>
-            </div>
-        </div>
-    </header>
 
-    <main>
-        <div class="contenitore">
-            <ul>
-                <li>
-                    fare la spesa
-                </li>
-                <li>
-                    dar da mangiare ai gatti
-                </li>
-                <li>
-                    lavare i panni
-                </li>
-                <li>
-                    studiare
-                </li>
-                <li>
-                    andare al cinema
-                </li>
-            </ul>
-        </div>
-    </main>
+    <div id="app">
+        <header>
+            <div class="cont-head">
+                <div class="logo">
+                    <img src="img/logo.png" alt="logo boolean">
+                </div>
+                <div class="head-basso">
+                    <input type="text" placeholder="scrivi le cose da fare">
+                    <button>aggiungi</button>
+                </div>
+            </div>
+        </header>
 
-    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+        <main>
+            <div class="contenitore">
+                <ul>
+                    <li v-for= "item in lista">
+                        {{item}}
+                        <i class="fas fa-times"></i>
+                    </li>
+                    
+                </ul>
+            </div>
+        </main>
+    </div>
+
+    
     <script src="js/script.js"></script>
 </body>
 </html>

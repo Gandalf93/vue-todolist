@@ -7,35 +7,35 @@
     width: 30%;
     margin: auto;
     padding: 30px;
-    background-color: pink;
+    text-align: center;
 }
   
 .logo{
-display: flex;
-justify-content: center;
+    margin-bottom: 10px;
 }
-
 .logo img{
     height: 50px;
     width: 70%;
 }
-
-.head-basso{
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
-}
-
+    
 .contenitore{
-    background-color: cornflowerblue;
+    background-color: rgb(203, 216, 240);
     width: 60%;
     margin: auto;
     padding: 10px;
+    
 }
 
 .contenitore ul li{
     padding: 10px;
     list-style: none;
-    border-bottom: 1px solid lightgrey;
+    border-bottom: 1px solid grey;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+}
+  
+.contenitore ul li:hover {
+    background-color: white;
 }
   
