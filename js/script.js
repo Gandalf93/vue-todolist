@@ -20,8 +20,13 @@ const app = new Vue (
         methods:{
             addElemento (){
                 this.lista.push(this.newli);
-                this.newli = ''
-            }
-        }
-    }
-);
+                this.newli = '';
+            },
+
+            elimina(indice){
+                this.lista.splice(indice,1);
+              }
+          }
+      }
+  );
+                

@@ -19,7 +19,7 @@
                     <img src="img/logo.png" alt="logo boolean">
                 </div>
                 <div class="head-basso">
-                    <input type="text" placeholder="scrivi le cose da fare" v-model="newli">
+                    <input type="text" placeholder="scrivi le cose da fare" v-model="newli" @keyup.enter= "addElemento">
                     <button @click='addElemento'>aggiungi</button>
                 </div>
             </div>
@@ -28,9 +28,9 @@
         <main>
             <div class="contenitore">
                 <ul>
-                    <li v-for= "item in lista">
+                    <li v-for= "(item, index) in lista">
                         {{item}}
-                        <i class="fas fa-times"></i>
+                        <i class="fas fa-times" @click= "elimina(index)"></i>
                     </li>
                     
                 </ul>
